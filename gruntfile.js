@@ -17,7 +17,7 @@ module.exports = grunt => {
 			},
 			my_target: {
 				files: [{
-					'<%= dirs.dest %>/stylelibs.min.css' : ['<%= dirs.css %>/**/*.css']
+					'<%= dirs.dest %>/stylelibs.min.css' : ['<%= dirs.css %>/**/*.css', 'icons/fontello.css']
 				}]
 			}
         },
@@ -40,7 +40,7 @@ module.exports = grunt => {
 					// global
 					'<%= dirs.dest %>/jsmain.min.js': ['<%= dirs.js %>/libs/*.js'],
 					// my js
-					'<%= dirs.dest %>/main.min.js': ['<%= dirs.js %>/*.js'],
+					// '<%= dirs.dest %>/main.min.js': ['<%= dirs.js %>/*.js'],
 
 		      	}
 		    }

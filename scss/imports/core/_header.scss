@@ -1,18 +1,133 @@
-// header .logo{
-// 	width: 90px;
-// 	height: 50px;
-//     // @include desktop {
-        
-//     // }
-//     // @include tablet {
-        
-//     // }
-//     // @include mobile {
-        
-//     // }
-//     // @include mobile-xxs {
-        
-//     // }
-// }
+header {
+  .container-fluid {
+    margin: 0 -15px;
+  }
+  .header-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    height: 70px;
+    background-color: $main-bg-cl;
+    .menu {
+      padding-left: 15px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      width: 10%;
+      border-right: 1px solid #cecece;
+      cursor: pointer;
+      .hamburger {
+        width: 30px;
+        > div {
+          position: absolute;
+          width: 30px;
+          height: 2px;
+          background-color: $black-cl;
+          transition: 0.4s;
+          &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: $black-cl;
+            top: 7px;
+            left: 0;
+            transition: 0.4s;
+          }
+          &::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: $black-cl;
+            top: -7px;
+            left: 0;
+            transition: 0.4s;
+          }
+        }
+        &.active {
+          > div {
+            transform: rotate(135deg);
+            transition: 0.4s;
+            &::after {
+              transition: 0.4s;
+              transform: rotate(90deg);
+              top: 0;
+            }
+            &::before {
+              transition: 0.4s;
+              transform: rotate(90deg);
+              top: 0;
+            }
+          }
+        }
+      }
+      > span {
+        padding-left: 10px;
+        width: 50%;
+        display: block;
+        @include text(16px, SA, normal, black, uppercase);
+      }
+      &:hover {
+        background-color: #cecece;
+        transition: all 0.4s;
+        opacity: 0.8;
+      }
+    }
+  }
+  .logo {
+    height: 100%;
+    @include midflex;
+    a {
+      height: 100%;
+      i {
+        img {
+          object-fit: contain;
+        }
+      }
+    }
+  }
+  .btn {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    width: 15%;
+    @include text(14px, SA-B, normal, black, uppercase);
+    &__login,
+    &__signin {
+      width: 50%;
+      height: 100%;
+      cursor: pointer;
+      height: 100%;
+      span {
+        display: inline-block;
+        height: 100%;
+        @include midflex;
+      }
+      &:hover {
+        span {
+          transition: all 0.4s;
+          opacity: 0.6;
+        }
+      }
+    }
+    &__signin {
+      color: white;
+      background-color: $blue-cl;
+    }
+  }
 
+  // @include desktop {
 
+  // }
+  // @include tablet {
+
+  // }
+  // @include mobile {
+
+  // }
+  // @include mobile-xxs {
+
+  // }
+}

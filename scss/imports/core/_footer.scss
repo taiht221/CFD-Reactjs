@@ -1,14 +1,70 @@
-// footer {
-// 	@include desktop {
-		
-// 	}
-// 	@include tablet {
-		
-// 	}
-// 	@include mobile {
-		
-// 	}
-// 	@include mobile-xxs {
-		
-// 	}
-// }
+footer {
+  margin-top: 60px;
+  .footer-wrap {
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+
+      .information {
+        margin-bottom: 60px;
+        flex-basis: 50%;
+        .sologan {
+          margin-bottom: 45px;
+          @include text(16px, SA-B, normal, black, none);
+        }
+        address {
+          @include text(16px, SA, normal, black, none);
+          > a {
+            margin-bottom: 20px;
+          }
+          .social {
+            display: flex;
+            a {
+              &:hover {
+                i {
+                  transition: all 0.4s;
+                  color: $blue-cl;
+                }
+              }
+            }
+          }
+        }
+      }
+      .nav {
+        flex-basis: 50%;
+        ul {
+          @include text(16px, SA, normal, black, capitalize);
+          display: flex;
+          justify-content: space-around;
+          li {
+            a {
+              padding-right: 15px;
+              &:hover {
+                transition: all 0.4s;
+                opacity: 0.6;
+              }
+            }
+          }
+        }
+      }
+    }
+    .footer-bot {
+      border-top: 1px solid #7e7e7e;
+      display: flex;
+      justify-content: space-between;
+      padding: 15px 0px;
+      @include text(14px, SA, normal, #7e7e7e, none);
+      span {
+        display: inline-block;
+      }
+    }
+  }
+  @include desktop {
+  }
+  @include tablet {
+  }
+  @include mobile {
+  }
+  @include mobile-xxs {
+  }
+}

@@ -5,8 +5,10 @@ a {
 }
 img {
     display: block;
-    margin: auto;
-    max-width: 100%;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
 }
 strong {
     font-weight: bold;
@@ -24,5 +26,21 @@ strong {
     }
     @include mobile {
     }
+}
+.main-btn{
+        background-color: $blue-cl;
+        @include text(16px, SA,46px, white, uppercase);
+        font-weight: 400;
+        display: inline-block;
+        border-radius: 100px;
+        margin-top: 40px;
+        text-align: center;
+        height: 46px;
+        padding: 0 36px;
+        width: 170px;
+    
+}
+.blue{
+    color: $blue-cl;
 }
 

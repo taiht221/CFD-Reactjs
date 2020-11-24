@@ -1,0 +1,241 @@
+.homepage {
+  background-color: $main-bg-cl;
+  .mainbg {
+    background: url(/img/image.jpg) no-repeat;
+    height: 780px;
+    background-attachment: fixed;
+    position: relative;
+
+    .content {
+      @include mid;
+      display: flex;
+      flex-direction: column;
+      @include text(14px, SA, normal, $white-cl, uppercase);
+      align-items: center;
+      h1 {
+        font-size: 70px;
+        font-weight: bold;
+        margin-bottom: 15px;
+      }
+    }
+  }
+  .intro {
+    margin: 75px auto 70px;
+    width: 60%;
+    text-align: center;
+    @include text(24px, SA, normal, $black-cl, none);
+    font-weight: 400;
+    &:after {
+      display: block;
+      content: "";
+      background-color: black;
+      height: 100px;
+      width: 2px;
+      margin: 0 auto;
+      margin-top: 35px;
+    }
+  }
+  .online-courses {
+    > h2 {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      @include text(16px, SA, normal, $black-cl, uppercase);
+      margin-bottom: 50px;
+      strong {
+        font-size: 50px;
+        font-family: SA-B;
+      }
+    }
+    &__wrap {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      .course {
+        background-color: $white-cl;
+        margin-right: 30px;
+        margin-bottom: 20px;
+        width: calc((100% - 30px * 2) / 3);
+        &__img {
+          overflow: hidden;
+          img {
+            transition: all 0.4s;
+          }
+          &:hover {
+            img {
+              transition: all 0.4s;
+              transform: scale(1.2);
+            }
+          }
+        }
+        &__name {
+          padding: 0 15px;
+          margin: 10px 0px;
+          h3 {
+            @include text(16px, SA-B, normal, $black-cl, uppercase);
+          }
+        }
+        p {
+          padding: 0 15px;
+          @include text(12px, SA, normal, $gray-cl, uppercase);
+          margin-bottom: 50px;
+        }
+        &:nth-child(3n) {
+          margin-right: 0;
+        }
+        .teacher {
+          height: 80px;
+          border-top: 1px solid #cecece;
+          display: flex;
+          align-items: center;
+          &__infor {
+            padding-left: 15px;
+            display: flex;
+            align-items: center;
+
+            img {
+              border-radius: 50%;
+              width: 50px;
+              height: 50px;
+            }
+            span {
+              margin-left: 15px;
+              @include text(16px, SA-B, normal, $black-cl, capitalize);
+            }
+          }
+          .detail {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            border-left: 1px solid #cecece;
+            margin-left: auto;
+            padding: 0 15px;
+            @include text(16px, SA-B, normal, $blue-cl, capitalize);
+          }
+        }
+      }
+    }
+  }
+  .line{
+      background-color: $gray-cl;
+      height: 1px;
+      margin: 45px 0;
+  }
+  .offline-courses {
+    > h2 {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      @include text(16px, SA, normal, $black-cl, uppercase);
+      margin-bottom: 50px;
+      strong {
+        font-size: 50px;
+        font-family: SA-B;
+      }
+    }
+    &__wrap {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      .course {
+        background-color: $white-cl;
+        margin-right: 30px;
+        margin-bottom: 20px;
+        width: calc((100% - 30px * 2) / 3);
+        &__img {
+          overflow: hidden;
+          img {
+            transition: all 0.4s;
+          }
+          &:hover {
+            img {
+              transition: all 0.4s;
+              transform: scale(1.2);
+            }
+          }
+        }
+        &__name {
+          padding: 0 15px;
+          margin: 10px 0px;
+          h3 {
+            @include text(16px, SA-B, normal, $black-cl, uppercase);
+          }
+        }
+        p {
+          padding: 0 15px;
+          @include text(12px, SA, normal, $gray-cl, uppercase);
+          margin-bottom: 50px;
+        }
+        &:nth-child(3n) {
+          margin-right: 0;
+        }
+        .teacher {
+          height: 80px;
+          border-top: 1px solid #cecece;
+          display: flex;
+          align-items: center;
+          &__infor {
+            padding-left: 15px;
+            display: flex;
+            align-items: center;
+
+            img {
+              border-radius: 50%;
+              width: 50px;
+              height: 50px;
+            }
+            span {
+              margin-left: 15px;
+              @include text(16px, SA-B, normal, $black-cl, capitalize);
+            }
+          }
+          .detail {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            border-left: 1px solid #cecece;
+            margin-left: auto;
+            padding: 0 15px;
+            @include text(16px, SA-B, normal, $blue-cl, capitalize);
+          }
+        }
+      }
+    }
+  }
+  .special-things{
+      background-color: $black-cl;
+      &__wrap{
+          color: white;
+          display: flex;
+          justify-content: space-between;
+          .title-box{
+            margin: 40px 0;
+             width: calc((100% - 30px * 2) / 2);
+              display: flex;
+              flex-direction: column;
+            h2{
+                margin-bottom: 65px;
+                @include text(40px, SA-B, normal, $white-cl, uppercase);
+            }
+            img{
+                height: 330px;
+            }
+          }
+          .content-box{
+            width: calc((100% - 30px * 2) / 2);
+            display: flex;
+            flex-direction: column;
+            .item{
+                margin: 40px 0;
+            }
+            h4{
+                margin-bottom: 14px;
+                @include text(22px, SA-B, normal, $white-cl, uppercase);
+            }  
+            p{
+                @include text(16px, SA, normal, $white-cl, none);
+            }
+          }
+      }
+  }
+}
