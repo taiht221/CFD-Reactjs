@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>0</h1>
+    <button id="cong">cong</button>
+    <button id="tru">tru</button>
+    <button id="reset">reset</button>
+    <script>
+        // let count = 0;
+
+        // class Counter {
+        //     constructor(init){
+        //         this.count =init || 0;
+        //     }
+        //     cong() {
+        //         this.count++;
+        //         return this.count;
+        //     }
+        //     tru() {
+        //         this.count--;
+        //         return this.count;
+        //     }
+        //     reset() {
+        //         this.count = 0;
+        //         return this.count;
+        //     }
+
+        // }
+        function myCounter(e) {
+            let count = e || 0;
+            return [
+                count,
+                () => ++count,
+                () => --count,
+                () => count = 0,
+
+            ]
+        }
+        let h1 = document.getElementsByTagName("h1")[0];
+        // let myCounter = new Counter(0);
+        let [count, inc, dec, re] = myCounter();
+        let cong = document.querySelector("#cong");
+        let tru = document.querySelector("#tru");
+        let reset = document.querySelector("#reset");
+        cong.addEventListener("click", () => {
+            // h1.innerHTML=myCounter.cong(); 
+            h1.innerHTML = inc();
+            // h1.innerHTML=a(); 
+        })
+        tru.addEventListener("click", () => {
+            // h1.innerHTML=myCounter.tru(); 
+            h1.innerHTML = dec();
+        })
+        reset.addEventListener("click", () => {
+            // h1.innerHTML=myCounter.reset(); 
+            h1.innerHTML = re();
+        })
+        var arr = [35, 50, 99, 100, 200];
+
+        // My filter() 
+        Array.prototype.filter2 = function(callback){
+            var output = [];
+            for (var index in this) {
+                if (this.hasOwnProperty(index)) {
+                    var result = callback(this[index], index, this);
+                    if (result) {
+                        output.push(this[index]);
+                    }
+                }
+            }
+            return output;
+        }
+        var arr2 = arr.filter2(function (e, i, array) {
+            return e > 50;
+        });
+        console.log(arr2);
+    </script>
+</body>
+
+</html>

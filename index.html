@@ -23,8 +23,41 @@
 </head>
 
 <body>
+    <div id="overlay"></div>
+
+    <div class="signup">
+        <h2 class="signup-heading">Đăng nhập</h2>
+        <form action="#" class="signup-form" autocomplete="off">
+            <div class="form-group">
+                <input type="email" class="form-input" id="email" placeholder="Email/ Số điện thoại">
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-input" id="password" placeholder="Mật khẩu">
+            </div>
+            <div class="remember">
+                <div><input type="checkbox" id="remember" ><label for="vehicle1"> Nhớ mật khẩu</label></div>
+                <div><a href="">Quên mật khẩu?</a></div>
+            </div>
+            <button type="submit" class="form-submit">Đăng nhập</button>
+        </form>
+        <p class="signup-already">hoặc đăng nhập bằng</p>
+        <a href="#" class="signup-google">
+            <span class="signup-google-text">Google</span>
+        </a>
+        <span class="close-btn">&#215;</span>
+    </div>
+    <div class="register">
+        <h2 class="signup-heading">Đăng ký</h2>
+        <a href="#" class="signup-google">
+            <span class="signup-google-text">Google</span>
+        </a>
+        <p class="policy">
+            Bằng việc đăng kí, bạn đã đồng ý <a href="">Điều khoản bảo mật</a><br> của CFD
+        </p>
+        <span class="close-btn">&#215;</span>
+    </div>
+
     <header>
-        <div class="container-fluid">
             <div class="header-wrap">
                 <div class="menu">
                     <div class="hamburger">
@@ -46,7 +79,18 @@
                     </div>
                 </div>
             </div>
-        </div>
+            <div class="menu-left">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Trang chủ</a></li>
+                        <li><a href="products.html">Khóa học</a></li>
+                        <li><a href="service.html">CFD team</a></li>
+                        <li><a href="projects.html">Hỏi đáp</a></li>
+                        <li><a href="news.html">Hợp tác</a></li>
+                    </ul>
+                </nav>
+            </div>
+
     </header>
     <main class="homepage">
         <div class="mainbg">
@@ -62,7 +106,7 @@
                     has a more-or-less normal </p>
             </div>
             <div class="online-courses">
-                <h2>khóa học <strong>online</strong> </h2>
+                <h2 class="main-title">khóa học <strong>online</strong> </h2>
                 <div class="online-courses__wrap">
                     <div class="course">
                         <a href="course-detail.html" class="course__img"><img src="img/oline1.jpg" alt=""></a>
@@ -76,7 +120,7 @@
                                 <span>Trần Nghĩa</span>
                             </div>
                             <div class="detail">
-                                <span>Đăng ký</span>
+                                <a href="course-detail.html"><span>Đăng ký</span></a>
                             </div>
                         </div>
                     </div>
@@ -92,7 +136,7 @@
                                 <span>Trần Nghĩa</span>
                             </div>
                             <div class="detail">
-                                <span>Đăng ký</span>
+                                <a href="course-detail.html"><span>Đăng ký</span></a>
                             </div>
                         </div>
                     </div>
@@ -108,7 +152,7 @@
                                 <span>Trần Nghĩa</span>
                             </div>
                             <div class="detail">
-                                <span>Đăng ký</span>
+                                <a href="course-detail.html"><span>Đăng ký</span></a>
                             </div>
                         </div>
                     </div>
@@ -124,7 +168,7 @@
                                 <span>Trần Nghĩa</span>
                             </div>
                             <div class="detail">
-                                <span>Đăng ký</span>
+                                <a href="course-detail.html"><span>Đăng ký</span></a>
                             </div>
                         </div>
                     </div>
@@ -140,7 +184,7 @@
                                 <span>Trần Nghĩa</span>
                             </div>
                             <div class="detail">
-                                <span>Đăng ký</span>
+                                <a href="course-detail.html"><span>Đăng ký</span></a>
                             </div>
                         </div>
                     </div>
@@ -156,7 +200,7 @@
                                 <span>Trần Nghĩa</span>
                             </div>
                             <div class="detail">
-                                <span>Đăng ký</span>
+                                <a href="course-detail.html"><span>Đăng ký</span></a>
                             </div>
                         </div>
                     </div>
@@ -168,11 +212,11 @@
         <div class="line"></div>
         <div class="container">
             <div class="offline-courses">
-                <h2>khóa học <strong>offline</strong> </h2>
+                <h2 class="main-title">khóa học <strong>offline</strong> </h2>
                 <div class="offline-courses__wrap">
 
                     <div class="course">
-                        <a href="course-detail.html" class="course__img"><img src="img/oline4.jpg" alt=""></a>
+                        <a href="course-detail.html" class="course__img"><img src="img/offline1.jpg" alt=""></a>
                         <a href="course-detail.html" class="course__name">
                             <h3>Front-end căn bản</h3>
                         </a>
@@ -183,12 +227,12 @@
                                 <span>Trần Nghĩa</span>
                             </div>
                             <div class="detail">
-                                <span>Đăng ký</span>
+                                <a href="course-detail.html"><span>Đăng ký</span></a>
                             </div>
                         </div>
                     </div>
                     <div class="course">
-                        <a href="course-detail.html" class="course__img"><img src="img/oline5.jpg" alt=""></a>
+                        <a href="course-detail.html" class="course__img"><img src="img/offline2.jpg" alt=""></a>
                         <a href="course-detail.html" class="course__name">
                             <h3>Front-end căn bản</h3>
                         </a>
@@ -199,12 +243,12 @@
                                 <span>Trần Nghĩa</span>
                             </div>
                             <div class="detail">
-                                <span>Đăng ký</span>
+                                <a href="course-detail.html"><span>Đăng ký</span></a>
                             </div>
                         </div>
                     </div>
                     <div class="course">
-                        <a href="course-detail.html" class="course__img"><img src="img/oline6.jpg" alt=""></a>
+                        <a href="course-detail.html" class="course__img"><img src="img/offline3.jpg" alt=""></a>
                         <a href="course-detail.html" class="course__name">
                             <h3>Front-end căn bản</h3>
                         </a>
@@ -215,7 +259,7 @@
                                 <span>Trần Nghĩa</span>
                             </div>
                             <div class="detail">
-                                <span>Đăng ký</span>
+                                <a href="course-detail.html"><span>Đăng ký</span></a>
                             </div>
                         </div>
                     </div>
@@ -228,39 +272,198 @@
                     <div class="title-box">
                         <h2>Những Điều <br>
                             <strong class="blue">Đặc Biệt</strong>
-                             Tại CFD</h2>
+                            Tại CFD</h2>
                         <img src="img/index1.jpg" alt="special">
                     </div>
                     <div class="content-box">
-                            <div class="item">
-                                <h4>Không cam kết đầu ra</h4>
-                                <p>Với CFD thì việc cam kết đầu ra nó sẽ không có ý nghĩa nếu như cả người hướng dẫn và
-                                    người
-                                    học không thật sự tâm huyết và cố gắng. Vì thế, đội ngũ CFD sẽ làm hết sức để giúp các
-                                    thành
-                                    viên tạo ra sản phẩm có giá trị, thay vì cam kết.
-                                </p>
-                            </div>
-                            <div class="item">
-                                <h4>Không chỉ là một lớp học</h4>
-                                <p>CFD không phải một lớp học thuần túy, tất cả thành viên là một team, cùng hỗ trợ, chia sẻ
-                                    và
-                                    giúp đỡ nhau trong suốt quá trình học và sau này, với sự hướng dẫn tận tâm của các thành
-                                    viên đồng sáng lập.
-                                </p>
-                            </div>
-                            <div class="item">
-                                <h4>Không để ai bị bỏ lại phía sau</h4>
-                                <p>Vì chúng ta là một team, những thành viên tiếp thu chậm sẽ được đội ngũ CFD kèm cặp đặc
-                                    biệt,
-                                    cùng sự hỗ trợ từ các thành viên khác. Vì mục tiêu cuối cùng là hoàn thành
-                                    khóa
-                                    học thật tốt.
-                                </p>
-                            </div>
+                        <div class="item">
+                            <h4>Không cam kết đầu ra</h4>
+                            <p>Với CFD thì việc cam kết đầu ra nó sẽ không có ý nghĩa nếu như cả người hướng dẫn và
+                                người
+                                học không thật sự tâm huyết và cố gắng. Vì thế, đội ngũ CFD sẽ làm hết sức để giúp các
+                                thành
+                                viên tạo ra sản phẩm có giá trị, thay vì cam kết.
+                            </p>
+                        </div>
+                        <div class="item">
+                            <h4>Không chỉ là một lớp học</h4>
+                            <p>CFD không phải một lớp học thuần túy, tất cả thành viên là một team, cùng hỗ trợ, chia sẻ
+                                và
+                                giúp đỡ nhau trong suốt quá trình học và sau này, với sự hướng dẫn tận tâm của các thành
+                                viên đồng sáng lập.
+                            </p>
+                        </div>
+                        <div class="item">
+                            <h4>Không để ai bị bỏ lại phía sau</h4>
+                            <p>Vì chúng ta là một team, những thành viên tiếp thu chậm sẽ được đội ngũ CFD kèm cặp đặc
+                                biệt,
+                                cùng sự hỗ trợ từ các thành viên khác. Vì mục tiêu cuối cùng là hoàn thành
+                                khóa
+                                học thật tốt.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="member-thinks">
+            <div class="container">
+                <h2 class="main-title">cảm nhận <strong>thành viên</strong> </h2>
+                <div class="swiper-container ">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide member-thinks__wrap">
+                            <div class="member-details">
+                                <h4 class="member__name">
+                                    Harry Porter
+                                </h4>
+                                <span>Học viên CFD1</span>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda sit quod
+                                    provident officia, nam odit sequi, iste nostrum voluptas eum veniam? Eligendi atque
+                                    iste ut! Magni consequatur est ipsam enim.</p>
+                                <i class="quotaion-mark"><img src="img/Group.svg" alt="Quotaion-mark"></i>
+                                <div class="social">
+                                    <i class="icon icon-facebook"></i>
+                                    <span>08/09/2020</span>
+                                </div>
+                            </div>
+                            <div class="member-img">
+                                <img data-src="img/member.jpg" alt="img-detail" class="swiper-lazy">
+                            </div>
+
+
+                            <div class="swiper-lazy-preloader"></div>
+                        </div>
+                        <div class="swiper-slide member-thinks__wrap">
+                            <div class="member-details">
+                                <h4 class="member__name">
+                                    Harry Porter
+                                </h4>
+                                <span>Học viên CFD1</span>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda sit quod
+                                    provident officia, nam odit sequi, iste nostrum voluptas eum veniam? Eligendi atque
+                                    iste ut! Magni consequatur est ipsam enim.</p>
+                                <i class="quotaion-mark"><img src="img/Group.svg" alt="Quotaion-mark"></i>
+                                <div class="social">
+                                    <i class="icon icon-facebook"></i>
+                                    <span>08/09/2020</span>
+                                </div>
+                            </div>
+                            <div class="member-img">
+                                <img data-src="img/member.jpg" alt="img-detail" class="swiper-lazy">
+                            </div>
+
+
+                            <div class="swiper-lazy-preloader"></div>
+                        </div>
+                        <div class="swiper-slide member-thinks__wrap">
+                            <div class="member-details">
+                                <h4 class="member__name">
+                                    Harry Porter
+                                </h4>
+                                <span>Học viên CFD1</span>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda sit quod
+                                    provident officia, nam odit sequi, iste nostrum voluptas eum veniam? Eligendi atque
+                                    iste ut! Magni consequatur est ipsam enim.</p>
+                                <i class="quotaion-mark"><img src="img/Group.svg" alt="Quotaion-mark"></i>
+                                <div class="social">
+                                    <i class="icon icon-facebook"></i>
+                                    <span>08/09/2020</span>
+                                </div>
+                            </div>
+                            <div class="member-img">
+                                <img data-src="img/member.jpg" alt="img-detail" class="swiper-lazy">
+                            </div>
+
+
+                            <div class="swiper-lazy-preloader"></div>
+                        </div>
+                        <div class="swiper-slide member-thinks__wrap">
+                            <div class="member-details">
+                                <h4 class="member__name">
+                                    Harry Porter
+                                </h4>
+                                <span>Học viên CFD1</span>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda sit quod
+                                    provident officia, nam odit sequi, iste nostrum voluptas eum veniam? Eligendi atque
+                                    iste ut! Magni consequatur est ipsam enim.</p>
+                                <i class="quotaion-mark"><img src="img/Group.svg" alt="Quotaion-mark"></i>
+                                <div class="social">
+                                    <i class="icon icon-facebook"></i>
+                                    <span>08/09/2020</span>
+                                </div>
+                            </div>
+                            <div class="member-img">
+                                <img data-src="img/member.jpg" alt="img-detail" class="swiper-lazy">
+                            </div>
+
+
+                            <div class="swiper-lazy-preloader"></div>
+                        </div>
+                        <div class="swiper-slide member-thinks__wrap">
+                            <div class="member-details">
+                                <h4 class="member__name">
+                                    Harry Porter
+                                </h4>
+                                <span>Học viên CFD1</span>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda sit quod
+                                    provident officia, nam odit sequi, iste nostrum voluptas eum veniam? Eligendi atque
+                                    iste ut! Magni consequatur est ipsam enim.</p>
+                                <i class="quotaion-mark"><img src="img/Group.svg" alt="Quotaion-mark"></i>
+                                <div class="social">
+                                    <i class="icon icon-facebook"></i>
+                                    <span>08/09/2020</span>
+                                </div>
+                            </div>
+                            <div class="member-img">
+                                <img data-src="img/member.jpg" alt="img-detail" class="swiper-lazy">
+                            </div>
+
+
+                            <div class="swiper-lazy-preloader"></div>
+                        </div>
+
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <!-- Add Arrows -->
+                    <div class="btn-ctr --pre"><i><img src="img/arrow.svg" alt="arrow"></i></div>
+                    <div class="btn-ctr --next"><i><img src="img/next.svg" alt="arrow"></i></div>
+                </div>
+
+            </div>
+        </div>
+        <div class="team">
+            <h2 class="main-title">chúng ta<strong>là một team</strong> </h2>
+            <div class="team__wrap">
+                <div class="swiper-wrapper ">
+                    <div class="swiper-slide"><img data-src="img/oline5.jpg" alt="" class="swiper-lazy">
+                        <div class="swiper-lazy-preloader"></div>
+                    </div>
+                    <div class="swiper-slide"><img data-src="img/oline2.jpg" alt="" class="swiper-lazy">
+                        <div class="swiper-lazy-preloader"></div>
+                    </div>
+                    <div class="swiper-slide"><img data-src="img/oline3.jpg" alt="" class="swiper-lazy">
+                        <div class="swiper-lazy-preloader"></div>
+                    </div>
+                    <div class="swiper-slide"><img data-src="img/oline4.jpg" alt="" class="swiper-lazy">
+                        <div class="swiper-lazy-preloader"></div>
+                    </div>
+                    <div class="swiper-slide"><img data-src="img/oline5.jpg" alt="" class="swiper-lazy">
+                        <div class="swiper-lazy-preloader"></div>
+                    </div>
+                    <div class="swiper-slide"><img data-src="img/oline6.jpg" alt="" class="swiper-lazy">
+                        <div class="swiper-lazy-preloader"></div>
+                    </div>
+
+                </div>
+                <!-- Add scrollbar -->
+                <div class="swiper-scrollbar"></div>
+            </div>
+        </div>
+        <div class="ready">
+            <div class="text">
+                <p>Bạn đã sẵn sàng trở thành chiến binh tiếp theo của Team CFD chưa?</p>
+            </div>
+            <a href="course-detail.html" class="main-btn">Đăng kí</a>
         </div>
     </main>
     <footer>
@@ -296,6 +499,11 @@
                 <div class="footer-bot">
                     <span>2020 Creative Front-End Dev</span>
                     <span>Được thiết kế và lập trình bởi CFD Team</span>
+                </div>
+                <div id="back-to-top">
+
+                    <div class="line"></div>
+                    <span>Lên đầu</span>
                 </div>
 
             </div>

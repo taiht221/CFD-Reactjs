@@ -1,46 +1,261 @@
 a {
-    color: $text-cl;
-    text-decoration: none;
-    display: block;
+  color: $text-cl;
+  text-decoration: none;
+  display: block;
 }
 img {
-    display: block;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 strong {
-    font-weight: bold;
-    font-family: bb;
+  font-weight: bold;
+  font-family: bb;
 }
 
 .-lv1 {
-    @include text(100px, b, 100px, $white-cl, none);
-    font-weight: normal;
-    margin: 0;
-    a {
-        @include text(100px, g, 100px, $white-cl, none);
+  @include text(100px, b, 100px, $white-cl, none);
+  font-weight: normal;
+  margin: 0;
+  a {
+    @include text(100px, g, 100px, $white-cl, none);
+  }
+  @include tablet {
+  }
+  @include mobile {
+  }
+}
+.main-btn {
+  background-color: $blue-cl;
+  @include text(16px, SA, 46px, white, uppercase);
+  font-weight: 400;
+  display: inline-block;
+  border-radius: 100px;
+  margin-top: 40px;
+  text-align: center;
+  height: 46px;
+  padding: 0 36px;
+  width: 170px;
+
+  &:hover {
+    transition: all 0.4s;
+    opacity: 0.8;
+    box-shadow: 0px 5px black;
+  }
+}
+.blue {
+  color: $blue-cl;
+}
+.main-title {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  @include text(16px, SA, normal, $black-cl, uppercase);
+  margin-bottom: 50px;
+  strong {
+    font-size: 50px;
+    font-family: SA-B;
+  }
+}
+.btn {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  width: 15%;
+
+  &__login,
+  &__signin {
+    @include text(14px, SA-B, normal, black, uppercase);
+    width: 50%;
+    height: 100%;
+    cursor: pointer;
+    height: 100%;
+    span {
+      display: inline-block;
+      height: 100%;
+      @include midflex;
     }
-    @include tablet {
+    &:hover {
+      span {
+        transition: all 0.4s;
+        opacity: 0.6;
+      }
     }
+  }
+  &__signin {
+    color: white;
+    background-color: $blue-cl;
+  }
+}
+// over play and main active
+#overlay {
+  position: fixed;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 100;
+  pointer-events: none;
+  &.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+main {
+  transition: all 0.7s ease-in-out;
+  &.active {
+    transform: translate(50px, 0);
     @include mobile {
+      transform: initial;
     }
-}
-.main-btn{
-        background-color: $blue-cl;
-        @include text(16px, SA,46px, white, uppercase);
-        font-weight: 400;
-        display: inline-block;
-        border-radius: 100px;
-        margin-top: 40px;
-        text-align: center;
-        height: 46px;
-        padding: 0 36px;
-        width: 170px;
-    
-}
-.blue{
-    color: $blue-cl;
+  }
+  .container {
+    max-width: 100%;
+  }
 }
 
+.signup {
+  padding: 40px;
+  background-color: $main-bg-cl;
+  width: 35%;
+  height: 70%;
+  @include mid;
+  z-index: 102;
+  display: none;
+  .close-btn {
+    position: absolute;
+    font-size: 50px;
+    right: 10px;
+    top: 5px;
+    cursor: pointer;
+    &:hover {
+      transform: scale(0.8);
+      transition: all 0.4s;
+      opacity: 0.8;
+    }
+  }
+  &.active {
+    display: block;
+  }
+  .signup-form {
+    .remember {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      a {
+        color: $blue-cl;
+      }
+      #remember {
+        background-color: white;
+        width: 15px;
+        height: 15px;
+        outline: none;
+        appearance: auto;
+        @include text(14px, SA, normal, black, none);
+      }
+    }
+  }
+}
+.signup-heading {
+  text-align: center;
+  @include text(26px, SA-B, normal, black, uppercase);
+  margin-bottom: 10px;
+}
+.signup-google {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  width: 100%;
+  background-color: white;
+  text-decoration: none;
+  margin-top: 20px;
+  padding: 8px;
+}
+.signup-google-text {
+  @include text(26px, SA, normal, black, capitalize);
+  display: block;
+  margin: 0 auto;
+}
+.signup-already {
+  @include text(16px, SA-B, normal, black, uppercase);
+}
+
+.form-group {
+  margin: 0 auto;
+  margin-bottom: 25px;
+}
+
+.form-input {
+  display: block;
+  width: 100%;
+  padding: 20px;
+  border: 0;
+  outline: none;
+  font-family: "SA", sans-serif;
+  background-color: #f2f3f5;
+  color: #363a40;
+  font-size: 16px;
+}
+.form-input::-webkit-input-placeholder {
+  color: #b4bdc1;
+}
+
+.form-submit {
+  display: block;
+  margin: 20px auto;
+  width: 100%;
+  padding: 20px;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  border: 0;
+  background-color: $blue-cl;
+  font-size: 16px;
+  font-family: "SA", sans-serif;
+  outline: none;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 767px) {
+  .signup {
+    padding: 30px 20px;
+  }
+}
+.register{
+  padding: 40px;
+  background-color: $main-bg-cl;
+  width: 40%;
+  height: 40%;
+  display: none;
+  @include mid;
+  z-index: 102;
+  .policy{
+    margin-top: 30px;
+    @include text(14px, SA, normal, black, none);
+    text-align: center;
+    >a{
+      display: inline-block;
+      color: $blue-cl;
+    }
+  }
+  .close-btn {
+    position: absolute;
+    font-size: 50px;
+    right: 10px;
+    top: 5px;
+    cursor: pointer;
+    &:hover {
+      transform: scale(0.8);
+      transition: all 0.4s;
+      opacity: 0.8;
+    }
+  }
+  &.active{
+    display: block;
+  }
+}

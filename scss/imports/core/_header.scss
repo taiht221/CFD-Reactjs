@@ -1,8 +1,11 @@
 header {
-  .container-fluid {
-    margin: 0 -15px;
-  }
+  position: relative;
+  z-index: 101;
+  position: fixed;
+  width: 100%;
   .header-wrap {
+    
+    border-bottom: 1px solid #cecece;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -75,10 +78,13 @@ header {
         opacity: 0.8;
       }
     }
+    &.active{
+      display: none;
+    }
   }
   .logo {
     height: 100%;
-    @include midflex;
+    @include mid;
     a {
       height: 100%;
       i {
@@ -88,35 +94,72 @@ header {
       }
     }
   }
-  .btn {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    width: 15%;
-    @include text(14px, SA-B, normal, black, uppercase);
-    &__login,
-    &__signin {
-      width: 50%;
-      height: 100%;
-      cursor: pointer;
-      height: 100%;
-      span {
-        display: inline-block;
-        height: 100%;
-        @include midflex;
-      }
-      &:hover {
-        span {
-          transition: all 0.4s;
-          opacity: 0.6;
+  .menu-left{
+    transition: all 0.7s ease-in-out;
+    transform: translate(-100%,0);
+    position: absolute;
+    z-index: 1001;
+    width: 320px;
+    height: 100vh;
+    background-color: $main-bg-cl;
+    max-width: 100%;
+    >nav{
+      width: 100%;
+        ul,li,a{
+            width: 100%;
+            // opacity: 0.8;
         }
-      }
+        a{
+          border-top: 1px solid #cecece;
+          border-bottom: 1px solid #cecece;
+            padding: 20px 20px;
+            @include text(16px,"SA-B",30px,black, uppercase);
+            letter-spacing: 0.25;   
+            &:hover{
+              background-color: rgba($color: #000000, $alpha: 0.5);
+                transition: .4s;
+            }
+            
+        }
     }
-    &__signin {
-      color: white;
-      background-color: $blue-cl;
+    &.active{
+        transform: translate(0px, 0px);
     }
-  }
+    @include mobile{
+        width: 100%;
+        height: 100%;
+        z-index: 100000;
+        top: 50px;
+        padding: 10px;
+        .top{
+            justify-content: left;
+            .brand{
+                display: none;
+            }
+        }
+        .bot{
+            margin-top: 10px;
+            display: block;
+            .left{
+                display: none;
+            }
+            .right{
+                width: initial;
+                ul{
+                    li{
+                        a{
+                            font-size: 18px;
+                            padding: 10px 0;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+    
+}
+  
 
   // @include desktop {
 

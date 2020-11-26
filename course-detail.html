@@ -23,8 +23,41 @@
 </head>
 
 <body>
+    <div id="overlay"></div>
+
+    <div class="signup">
+        <h2 class="signup-heading">Đăng nhập</h2>
+        <form action="#" class="signup-form" autocomplete="off">
+            <div class="form-group">
+                <input type="email" class="form-input" id="email" placeholder="Email/ Số điện thoại">
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-input" id="password" placeholder="Mật khẩu">
+            </div>
+            <div class="remember">
+                <div><input type="checkbox" id="remember" ><label for="vehicle1"> Nhớ mật khẩu</label></div>
+                <div><a href="">Quên mật khẩu?</a></div>
+            </div>
+            <button type="submit" class="form-submit">Đăng nhập</button>
+        </form>
+        <p class="signup-already">hoặc đăng nhập bằng</p>
+        <a href="#" class="signup-google">
+            <span class="signup-google-text">Google</span>
+        </a>
+        <span class="close-btn">&#215;</span>
+    </div>
+    <div class="register">
+        <h2 class="signup-heading">Đăng ký</h2>
+        <a href="#" class="signup-google">
+            <span class="signup-google-text">Google</span>
+        </a>
+        <p class="policy">
+            Bằng việc đăng kí, bạn đã đồng ý <a href="">Điều khoản bảo mật</a><br> của CFD
+        </p>
+        <span class="close-btn">&#215;</span>
+    </div>
+
     <header>
-        <div class="container-fluid">
             <div class="header-wrap">
                 <div class="menu">
                     <div class="hamburger">
@@ -46,10 +79,21 @@
                     </div>
                 </div>
             </div>
-        </div>
+            <div class="menu-left">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Trang chủ</a></li>
+                        <li><a href="products.html">Khóa học</a></li>
+                        <li><a href="service.html">CFD team</a></li>
+                        <li><a href="projects.html">Hỏi đáp</a></li>
+                        <li><a href="news.html">Hợp tác</a></li>
+                    </ul>
+                </nav>
+            </div>
+
     </header>
     <main class="homepage">
-
+        
     </main>
     <footer>
         <div class="container">
@@ -57,12 +101,12 @@
                 <div class="footer-top">
                     <div class="information">
                         <div class="sologan">
-                            Sáng tạo, tinh tế và phù hợp sẽ khiến <br> 
+                            Sáng tạo, tinh tế và phù hợp sẽ khiến <br>
                             sản phẩm của bạn trở nên khác biệt.
                         </div>
                         <address>
                             <span>
-                            Số 11, Phan Kế Bính, Quận 1, TP. Hồ Chí Minh
+                                Số 11, Phan Kế Bính, Quận 1, TP. Hồ Chí Minh
                             </span>
                             <a href="tel:+84 98 9596 913">(+84) 98 9596 913</a>
                             <div class="social">
@@ -76,7 +120,7 @@
                         <ul>
                             <li> <a href="">Trang Chủ</a> </li>
                             <li> <a href="">khóa học</a> </li>
-                            <li>   <a href=""> thanh toán</a></li>
+                            <li> <a href=""> thanh toán</a></li>
                             <li> <a href="">Điều khoản</a> </li>
                         </ul>
                     </nav>
@@ -85,13 +129,18 @@
                     <span>2020 Creative Front-End Dev</span>
                     <span>Được thiết kế và lập trình bởi CFD Team</span>
                 </div>
-                
+                <div id="back-to-top">
+
+                    <div class="line"></div>
+                    <span>Lên đầu</span>
+                </div>
+
             </div>
         </div>
     </footer>
-	
-	<script type="text/javascript" src="dest/jsmain.min.js"></script>
-	<script type="text/javascript" src="js/main.js"></script>
+
+    <script type="text/javascript" src="dest/jsmain.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
 </body>
 
 </html>

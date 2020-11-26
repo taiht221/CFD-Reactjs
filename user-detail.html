@@ -23,33 +23,226 @@
 </head>
 
 <body>
+    <div id="overlay"></div>
+
+    <div class="signup">
+        <h2 class="signup-heading">Đăng nhập</h2>
+        <form action="#" class="signup-form" autocomplete="off">
+            <div class="form-group">
+                <input type="email" class="form-input" id="email" placeholder="Email/ Số điện thoại">
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-input" id="password" placeholder="Mật khẩu">
+            </div>
+            <div class="remember">
+                <div><input type="checkbox" id="remember"><label for="vehicle1"> Nhớ mật khẩu</label></div>
+                <div><a href="">Quên mật khẩu?</a></div>
+            </div>
+            <button type="submit" class="form-submit">Đăng nhập</button>
+        </form>
+        <p class="signup-already">hoặc đăng nhập bằng</p>
+        <a href="#" class="signup-google">
+            <span class="signup-google-text">Google</span>
+        </a>
+        <span class="close-btn">&#215;</span>
+    </div>
+    <div class="register">
+        <h2 class="signup-heading">Đăng ký</h2>
+        <a href="#" class="signup-google">
+            <span class="signup-google-text">Google</span>
+        </a>
+        <p class="policy">
+            Bằng việc đăng kí, bạn đã đồng ý <a href="">Điều khoản bảo mật</a><br> của CFD
+        </p>
+        <span class="close-btn">&#215;</span>
+    </div>
+
     <header>
-        <div class="container-fluid">
-            <div class="header-wrap">
-                <div class="menu">
-                    <div class="hamburger">
-                        <div></div>
-                    </div>
-                    <span>MENU</span>
+        <div class="header-wrap">
+            <div class="menu">
+                <div class="hamburger">
+                    <div></div>
                 </div>
-                <div class="logo">
-                    <a href="index.html">
-                        <i><img src="img/logo.svg" alt="logo"></i>
-                    </a>
+                <span>MENU</span>
+            </div>
+            <div class="logo">
+                <a href="index.html">
+                    <i><img src="img/logo.svg" alt="logo"></i>
+                </a>
+            </div>
+            <div class="btn">
+                <div class="btn__login">
+                    <span>Đăng nhập</span>
                 </div>
-                <div class="btn">
-                    <div class="btn__login">
-                        <span>Đăng nhập</span>
+                <div class="btn__signin">
+                    <span>Đăng Kí</span>
+                </div>
+            </div>
+        </div>
+        <div class="menu-left">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li><a href="products.html">Khóa học</a></li>
+                    <li><a href="service.html">CFD team</a></li>
+                    <li><a href="projects.html">Hỏi đáp</a></li>
+                    <li><a href="news.html">Hợp tác</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+    <main class="user-detail">
+        <div class="container">
+            <div class="user-infor">
+                <div class="user-infor__img">
+                    <img src="img/Nt.jpg" alt="user">
+                    <h1>Trần Nghĩa</h1>
+                    <p>Thành viên của team CFD1-OFFLINE</p>
+                </div>
+            </div>
+            <div class="user-course">
+                <div class="wrapper">
+                    <div class="tabs">
+                        <ul id="tabs__ul">
+                            <li class="active" data-list="tab_1">
+                                <p>Thông tin tài khoản</p>
+                            </li>
+                            <li data-list="tab_2">
+                                <p>khóa học của bạn</p>
+                            </li>
+                            <li data-list="tab_3">
+                                <p>dự án đã làm</p>
+                            </li>
+                            <li data-list="tab_4">
+                                <p>lịch sử thanh toán</p>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="btn__signin">
-                        <span>Đăng Kí</span>
+
+                    <div class="content">
+                        <div class="tab_content tab_1" id="tab_1">
+                            <form action="https://www.cfdtraining.vn/get-post/account/edit" method="POST">
+                                <label>
+                                    <p>Họ và tên<span>*</span></p>
+
+                                    <input type="text" name="title" value="Huỳnh Tiến Tài">
+
+                                </label>
+
+                                <label>
+                                    <p>Số điện thoại<span>*</span></p>
+
+                                    <input type="text" name="phone" value="0969045051">
+
+                                </label>
+
+                                <label>
+
+                                    <p>Email<span>*</span></p>
+                                    <input value="taiht221@gmail.com" type="text">
+
+
+                                </label>
+
+                                <label>
+                                    <p>Facebook<span>*</span></p>
+
+                                    <input type="text" name="facebook" placeholder="Facebook url" value="">
+
+                                </label>
+
+                                <label>
+                                    <p>Skype</p>
+
+                                    <input type="text" name="skype" placeholder="Skype url" value="">
+
+                                </label>
+
+                                <label >
+                                    <p>Cảm nhận về CFD</p>
+                                    <textarea name="review" rows="4" cols="50" style="resize: none;"
+                                        placeholder="Cảm nhận về CFD">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis excepturi error nesciunt rem ipsam deleniti nam provid</textarea>
+
+                                </label>
+                                <div class="btn main rect btn-save">LƯU LẠI</div>
+                            </form>
+                        </div>
+                        <div class="tab_content tab_2" id="tab_2" style="display:none;">
+                            <div class="card">
+
+                            </div>
+                            <div class="card">
+
+                            </div>
+                            <div class="card">
+
+                            </div>
+                        </div>
+                        <div class="tab_content tab_3" id="tab_3" style="display:none;">
+                            <div class="card">
+
+                            </div>
+                            <div class="card">
+                                <a href="project-details.html"><img src="img/projec-2.jpg" alt="project"></a>
+                                <div class="title">
+                                    <a href="project-details.html">
+                                        <h2>project 01</h2>
+                                    </a>
+                                </div>
+                                <div class="des">
+                                    <p>Clients : Cif</p>
+                                    <p>Photographer : Eric huynh</p>
+                                    <p>Director : Peter Zech</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <a href="project-details.html"><img src="img/projec-3.jpg" alt="project"></a>
+                                <div class="title">
+                                    <a href="project-details.html">
+                                        <h2>project 01</h2>
+                                    </a>
+                                </div>
+                                <div class="des">
+                                    <p>Clients : Cif</p>
+                                    <p>Photographer : Eric huynh</p>
+                                    <p>Director : Peter Zech</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab_content tab_4" id="tab_4" style="display:none;">
+
+                            <div class="card">
+                                <a href="project-details.html"><img src="img/projec-2.jpg" alt="project"></a>
+                                <div class="title">
+                                    <a href="project-details.html">
+                                        <h2>project 01</h2>
+                                    </a>
+                                </div>
+                                <div class="des">
+                                    <p>Clients : Cif</p>
+                                    <p>Photographer : Eric huynh</p>
+                                    <p>Director : Peter Zech</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <a href="project-details.html"><img src="img/projec-3.jpg" alt="project"></a>
+                                <div class="title">
+                                    <a href="project-details.html">
+                                        <h2>project 01</h2>
+                                    </a>
+                                </div>
+                                <div class="des">
+                                    <p>Clients : Cif</p>
+                                    <p>Photographer : Eric huynh</p>
+                                    <p>Director : Peter Zech</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </header>
-    <main class="homepage">
-
     </main>
     <footer>
         <div class="container">
@@ -57,12 +250,12 @@
                 <div class="footer-top">
                     <div class="information">
                         <div class="sologan">
-                            Sáng tạo, tinh tế và phù hợp sẽ khiến <br> 
+                            Sáng tạo, tinh tế và phù hợp sẽ khiến <br>
                             sản phẩm của bạn trở nên khác biệt.
                         </div>
                         <address>
                             <span>
-                            Số 11, Phan Kế Bính, Quận 1, TP. Hồ Chí Minh
+                                Số 11, Phan Kế Bính, Quận 1, TP. Hồ Chí Minh
                             </span>
                             <a href="tel:+84 98 9596 913">(+84) 98 9596 913</a>
                             <div class="social">
@@ -76,7 +269,7 @@
                         <ul>
                             <li> <a href="">Trang Chủ</a> </li>
                             <li> <a href="">khóa học</a> </li>
-                            <li>   <a href=""> thanh toán</a></li>
+                            <li> <a href=""> thanh toán</a></li>
                             <li> <a href="">Điều khoản</a> </li>
                         </ul>
                     </nav>
@@ -85,13 +278,18 @@
                     <span>2020 Creative Front-End Dev</span>
                     <span>Được thiết kế và lập trình bởi CFD Team</span>
                 </div>
-                
+                <div id="back-to-top">
+
+                    <div class="line"></div>
+                    <span>Lên đầu</span>
+                </div>
+
             </div>
         </div>
     </footer>
-	
-	<script type="text/javascript" src="dest/jsmain.min.js"></script>
-	<script type="text/javascript" src="js/main.js"></script>
+
+    <script type="text/javascript" src="dest/jsmain.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
 </body>
 
 </html>
