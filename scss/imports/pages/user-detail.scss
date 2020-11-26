@@ -1,4 +1,5 @@
 .user-detail {
+  padding: 70px;
   background-color: $main-bg-cl;
   .user-infor {
     margin: 50px 0;
@@ -18,19 +19,61 @@
     .wrapper {
       display: flex;
       justify-content: center;
+
       .tabs {
-        width: calc(100% - 800px );
+        width: 40%;
+        padding-right: 5%;
         #tabs__ul {
-          width: 380px;
-          height: 10%;
-            @include text(16px, SA-B, 22px, $black-cl, uppercase);
+          @include text(16px, SA-B, 22px, $black-cl, uppercase);
           li {
             border: 1px solid $gray-cl;
+            &:hover{
+              transition: all 0.4s;
+              background-color: rgba($color: #000000, $alpha: 0.5);
+            }
+            p {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 380px;
+              height: 60px;
+              cursor: pointer;
+              
+            }
           }
         }
       }
-      .content{
-        width: calc(100% - 380px );
+      .content {
+        width: 60%;
+        .tab_1{
+          background-color: #fff;
+          padding: 20px;
+          label{
+            margin-bottom: 20px;
+            >p{
+              @include text(14px, SA-B, normal, $black-cl, uppercase);
+              width: 20%;
+            }
+            display: flex;
+            input{
+              height: 30px;
+              width: 80%;
+              border: 1px solid $gray-cl;
+              &::-webkit-input-placeholder {
+                @include text(14px, SA, normal, $gray-cl, none);
+              }
+            }
+            
+
+          }
+          .btn__signin{
+            width: 100%;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        }
       }
     }
   }
