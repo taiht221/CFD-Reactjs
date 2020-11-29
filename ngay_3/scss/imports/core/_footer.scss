@@ -1,0 +1,101 @@
+footer {
+  margin-top: 60px;
+  .footer-wrap {
+    position: relative;
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+
+      .information {
+        margin-bottom: 60px;
+        flex-basis: 50%;
+        .sologan {
+          margin-bottom: 45px;
+          @include text(16px, SA-B, normal, black, none);
+        }
+        address {
+          @include text(16px, SA, normal, black, none);
+          > a {
+            margin-bottom: 20px;
+          }
+          .social {
+            display: flex;
+            a {
+              &:hover {
+                i {
+                  transition: all 0.4s;
+                  color: $blue-cl;
+                }
+              }
+            }
+          }
+        }
+      }
+      .nav {
+        flex-basis: 50%;
+        ul {
+          @include text(16px, SA, normal, black, capitalize);
+          display: flex;
+          justify-content: space-around;
+          li {
+            a {
+              padding-right: 15px;
+              &:hover {
+                transition: all 0.4s;
+                opacity: 0.6;
+              }
+            }
+          }
+        }
+      }
+    }
+    .footer-bot {
+      border-top: 1px solid #7e7e7e;
+      display: flex;
+      justify-content: space-between;
+      padding: 15px 0px;
+      @include text(14px, SA, normal, #7e7e7e, none);
+      span {
+        display: inline-block;
+      }
+    }
+    #back-to-top{
+      cursor: pointer;
+      position: absolute;
+      @include text(12px,arial,26px,$black-cl, uppercase);
+      // writing-mode: vertical-lr;
+      right: -22px;
+      bottom: 180px; 
+      height: 100px;
+      .line{
+          background-color: $black-cl;
+          width: 1px;
+          height: 140px;
+          margin: 0 auto 30px;    
+          transition: all .3s;
+      }
+      span{
+          display: block;
+          text-transform: uppercase;
+          transform: rotate(270deg);
+      }
+      &:hover{
+          .line{
+              transform: translateY(-20px);
+          }
+      }
+      @include mobile{
+          right: -10px;
+          bottom: 0px;
+      }
+  }
+  }
+  @include desktop {
+  }
+  @include tablet {
+  }
+  @include mobile {
+  }
+  @include mobile-xxs {
+  }
+}

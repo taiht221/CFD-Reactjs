@@ -1,0 +1,156 @@
+.user-detail {
+  padding: 70px;
+  background-color: $main-bg-cl;
+  .user-infor {
+    margin: 50px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    .user-infor__details{
+      >h1{
+        @include text(24px, SA-B, normal, $black-cl, uppercase);
+        margin: 10px 0;
+      }
+      >p{
+        @include text(16px, SA, normal,$gray-cl, none);
+      }
+      img {
+        display: initial;
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+      }
+    }
+    
+  }
+  .user-course {
+    .wrapper {
+      display: flex;
+      justify-content: center;
+
+      .tabs {
+        width: 40%;
+        padding-right: 5%;
+        #tabs__ul {
+          @include text(16px, SA-B, 22px, $black-cl, uppercase);
+          li {
+            border: 1px solid $gray-cl;
+            &:hover{
+              transition: all 0.4s;
+              background-color: rgba($color: #000000, $alpha: 0.5);
+            }
+            p {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 380px;
+              height: 60px;
+              cursor: pointer;
+              
+            }
+          }
+        }
+      }
+      .content {
+        width: 60%;
+        .tab_1{
+          position: relative;
+          background-color: #fff;
+          padding: 40px;
+          .form-group{
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            .form-label{
+              margin-bottom: 20px;
+              @include text(14px, arial, normal, $black-cl, uppercase);
+              
+              sup{
+                margin-left: 3px;
+                color: $blue-cl;
+              }
+            }
+            .form-control{
+              height: 30px;
+              border: 2px solid $gray-cl;
+              &::-webkit-input-placeholder {
+                @include text(14px, SA, normal, $gray-cl, none);
+              }
+              &.error{
+                border: 1px solid red;
+                outline: red;
+              }
+              
+
+            }
+            .form-message{
+              margin-top: 5px;
+              @include text(14px, arial, normal, $black-cl, none);
+              color: red;
+            }
+
+          }
+          .btn__signin{
+            left: 0 ;
+            width: 100%;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            bottom: 0;
+          }
+        }
+        .tab_2{
+          display: flex;
+          flex-direction: column;
+          .course{
+            display: flex;
+            margin-bottom: 20px;
+            &__img{
+              width: 50%;
+            }
+            &__infor{
+              background-color: white;
+              padding-left: 20px;
+              width: 50%;
+              h2{
+                margin-top: 20px;
+                @include text(20px, SA-B, normal, $black-cl, uppercase);
+              }
+              p{
+                @include text(14px, SA, normal, $gray-cl, none);
+              }
+              >*{
+                
+                margin-bottom: 20px;
+              }
+              .process{
+                display: flex;
+                @include text(14px, SA, normal, $black-cl, none);
+                >*{
+                  display: flex;
+                  align-items: center;
+                  margin-right: 10px;
+                  i{
+                    margin-right: 5px ;
+                  }
+                }
+              }
+              .btn-continue{
+                text-align: center;
+                width: 50%;
+                @include text(14px, SA, normal, $black-cl, uppercase);
+                border: 1px solid #000;
+                border-radius: 20px;  
+                padding: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
